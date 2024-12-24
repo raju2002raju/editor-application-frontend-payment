@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { baseUrl } from '../Config';
 
 const PaymentTest = () => {
     const [responseId, setResponseId] = useState('');
@@ -32,7 +33,7 @@ const PaymentTest = () => {
 
         const config = {
             method: 'POST',
-            url: 'http://localhost:8080/api/orders',
+            url: `${baseUrl}/api/orders`,
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -91,7 +92,7 @@ const PaymentTest = () => {
 
         const paymentId = e.target.paymentId.value;
 
-        axios.get(`http://localhost:8080/api/payment/${paymentId}`)
+        axios.get(`${baseUrl}/api/payment/${paymentId}`)
             .then((response) => {
                 console.log('Payment Details:', response.data);
                 setResponseState(response.data);

@@ -59,7 +59,7 @@ const PaymentTest = () => {
         }
 
         const options = {
-            key: 'apiKey',
+            key: process.env.KEY_ID,
             amount: orderData.amount,
             currency: orderData.currency,
             order_id: orderData.id,

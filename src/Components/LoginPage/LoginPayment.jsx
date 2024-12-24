@@ -45,7 +45,7 @@ const LoginPayment = () => {
 
     const config = {
       method: 'POST',
-      url: 'http://localhost:8080/api/orders',
+      url: `${baseUrl}/api/orders`,
       headers: {
         'Content-Type': 'application/json',
       },

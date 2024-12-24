@@ -59,7 +59,7 @@ const PaymentTest = () => {
         }
 
         const options = {
-            key: 'rzp_test_Ld8VJIKgd9spxQ',
+            key: 'apiKey',
             amount: orderData.amount,
             currency: orderData.currency,
             order_id: orderData.id,
